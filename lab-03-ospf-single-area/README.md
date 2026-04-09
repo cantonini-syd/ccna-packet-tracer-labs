@@ -30,7 +30,7 @@ Built loopbacks first, because if OSPF is already running when you add a new loo
 - `show ip ospf neighbor` on R1 — confirmed FULL adjacencies with R2 (via F1/0) and R4 (via G0/0), and showed 2.2.2.2 and 4.4.4.4 as the neighbor router IDs (confirming the loopbacks were picked up)
 - `show ip ospf interface brief` — confirmed OSPF active on the expected interfaces and Lo0 marked passive
 - `show ip route ospf` on R1 — before reference-bandwidth change: equal-cost load-balance to 3.3.3.3 via both R2 and R4; after the change: single best path via R4 (gigabit); after the interface cost override: single best path via R2
-- `show ip ospf interface g0/0` on R1 — confirmed cost of 1000 after the manual override
+- `show ip ospf interface g0/0` on R1 — confirmed cost of 10000 after the manual override
 
 ## Troubleshooting / learnings
 The reference-bandwidth default of 100 Mbps means OSPF can't tell the difference between Fast Ethernet, Gigabit, 10 Gig, or 100 Gig links out of the box because the cost formula bottoms out at 1. If you don't bump it, OSPF will happily pick a slow path that has fewer FastEthernet hops over a fast path with more Gigabit hops, which is the opposite of what you want. If you change `auto-cost reference-bandwidth` on one router in an area, change it on all of them, inconsistent values cause mismatched costs and unpredictable path selection.
