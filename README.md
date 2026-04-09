@@ -19,7 +19,7 @@ I'm transitioning into network operations. Working through labs and writing up i
 |---|-----|--------|
 | 01 | [VLANs and Trunking](./lab-01-vlans-and-trunking) | VLAN creation, access ports, 802.1Q trunking, native VLAN behaviour |
 | 02 | [SSH Remote Access Configuration](./lab-02-ssh-configuration) | RSA key generation, VTY hardening, SSHv2, disabling Telnet |
-
+| 03 | [OSPF Single-Area](./lab-03-ospf-single-area) | Loopback router IDs, passive interfaces, reference bandwidth, interface cost manipulation |
 *More labs added as I work through them.*
 
 ## Tools
