@@ -7,7 +7,7 @@ My solutions and walkthroughs for **Jeremy's IT Lab** CCNA Packet Tracer practic
 Each lab is in its own folder containing:
 
 - A **README** describing the objective, topology, tasks, my approach, the verification commands I used, and what I learned (including any mistakes and how I caught them)
-- **IOS configuration files** (`.txt`) — the running-config exported from each device after I completed the lab
+- **IOS configuration files** (`.txt`) - the running-config exported from each device after I completed the lab
 
 ## Why I built this
 
@@ -23,14 +23,13 @@ I'm transitioning into network operations. Working through labs and writing up i
 
 *More labs added as I work through them.*
 
-## Tools
+## Tool
 
 - Cisco Packet Tracer
-- Cisco IOS 12.2 (switches) / 15.1 (routers)
 
 ## Credit
 
-All lab scenarios are based on the free CCNA practice labs published by **Jeremy Cioara** [jeremysitlab.com](https://jeremysitlab.com) and his accompanying YouTube videos. Jeremy's content is an outstanding free resource for anyone studying networking — if you find these walkthroughs useful, go support him directly.
+All lab scenarios are based on the free CCNA practice labs published by **Jeremy Cioara** [jeremysitlab.com](https://jeremysitlab.com) and his accompanying YouTube videos. Jeremy's content is an outstanding free resource for anyone studying networking.
 
 ## License
 
