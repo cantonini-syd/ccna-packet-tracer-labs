@@ -33,7 +33,7 @@ Built loopbacks first, because if OSPF is already running when you add a new loo
 - `show ip ospf interface g0/0` on R1 — confirmed cost of 10000 after the manual override
 
 ## Troubleshooting / learnings
-The reference-bandwidth default of 100 Mbps means OSPF can't tell the difference between Fast Ethernet, Gigabit, 10 Gig, or 100 Gig links out of the box because the cost formula bottoms out at 1. If you don't bump it, OSPF will happily pick a slow path that has fewer FastEthernet hops over a fast path with more Gigabit hops, which is the opposite of what you want. If you change `auto-cost reference-bandwidth` on one router in an area, change it on all of them, inconsistent values cause mismatched costs and unpredictable path selection.
+The reference-bandwidth default of 100 Mbps means OSPF can't tell the difference between Fast Ethernet, Gigabit, 10 Gig, or 100 Gig links out of the box because the cost formula bottoms out at 1. If you don't change it, OSPF could pick a slow path that has fewer FastEthernet hops over a fast path with more Gigabit hops, which is the opposite of what you want. If you change `auto-cost reference-bandwidth` on one router in an area, change it on all of them, inconsistent values cause mismatched costs and unpredictable path selection.
 
 ## Files
 - `R1-config.txt` — running configuration from R1
