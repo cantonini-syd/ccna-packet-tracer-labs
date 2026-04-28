@@ -1,0 +1,102 @@
+R1(config)#do show run
+Building configuration...
+
+Current configuration : 1146 bytes
+!
+version 12.2
+no service timestamps log datetime msec
+no service timestamps debug datetime msec
+no service password-encryption
+!
+hostname R1
+!
+!
+!
+!
+!
+!
+!
+!
+ip cef
+no ipv6 cef
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+interface FastEthernet0/0
+ ip address 192.168.1.1 255.255.255.0
+ duplex auto
+ speed auto
+!
+interface FastEthernet1/0
+ ip address 192.168.2.1 255.255.255.0
+ duplex auto
+ speed auto
+!
+interface Serial2/0
+ ip address 12.0.0.1 255.255.255.0
+ ip access-group 100 out
+ clock rate 2000000
+!
+interface Serial3/0
+ no ip address
+ clock rate 2000000
+ shutdown
+!
+interface FastEthernet4/0
+ no ip address
+ shutdown
+!
+interface FastEthernet5/0
+ no ip address
+ shutdown
+!
+router rip
+ version 2
+ network 12.0.0.0
+ network 192.168.1.0
+ network 192.168.2.0
+ no auto-summary
+!
+ip classless
+!
+ip flow-export version 9
+!
+!
+access-list 100 permit ip host 192.168.1.11 host 192.168.3.100
+access-list 100 deny ip any host 192.168.3.100
+access-list 100 permit ip 192.168.2.0 0.0.0.255 host 192.168.3.101
+access-list 100 deny ip any host 192.168.3.101
+access-list 100 permit ip any any
+!
+!
+!
+!
+!
+!
+line con 0
+!
+line aux 0
+!
+line vty 0 4
+ login
+!
+!
+!
+end
