@@ -11,7 +11,7 @@ Each lab is in its own folder containing:
 
 ## Why I built this
 
-I'm transitioning into network operations. Working through labs and writing up is how I'm building both the muscle memory for the CLI and the discipline of documenting changes the way I'd be expected to in a real NOC. 
+I'm building a career in IT infrastructure and security. Working through labs and writing up each one is how I'm developing hands-on CLI skills and the habit of documenting changes clearly — both essential in any operations or engineering role.
 
 ## Lab index
 
@@ -20,8 +20,8 @@ I'm transitioning into network operations. Working through labs and writing up i
 | 01 | [VLANs and Trunking](./lab-01-vlans-and-trunking) | VLAN creation, access ports, 802.1Q trunking, native VLAN behaviour |
 | 02 | [SSH Remote Access Configuration](./lab-02-ssh-configuration) | RSA key generation, VTY hardening, SSHv2, disabling Telnet |
 | 03 | [OSPF Single-Area](./lab-03-ospf-single-area) | Loopback router IDs, passive interfaces, reference bandwidth, interface cost manipulation |
-
-*More labs added as I walk through them.*
+| 04 | [DHCP Configuration](./lab-04-dhcp-configuration) | DHCP pools, excluded addresses, DHCP client on a router, relay agent with ip helper-address |
+| 05 | [Extended ACLs](./lab-05-extended-acls) | Numbered extended ACLs, source/destination filtering, wildcard masks, ACL entry ordering, implicit deny |
 
 ## Tool
 
@@ -29,8 +29,4 @@ I'm transitioning into network operations. Working through labs and writing up i
 
 ## Credit
 
-All lab scenarios are based on the free CCNA practice labs published by **Jeremy Cioara** [jeremysitlab.com](https://jeremysitlab.com) and his accompanying YouTube videos. Jeremy's content is an outstanding free resource for anyone studying networking.
-
-## License
-
-The walkthroughs and configurations in this repository are released under the MIT License (see `LICENSE`). 
+All lab scenarios are based on the free CCNA practice labs published by **Jeremy Cioara** [jeremysitlab.com](https://jeremysitlab.com) and his accompanying YouTube videos.
